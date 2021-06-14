@@ -1,0 +1,21 @@
+nav {
+
+line-height: 120px;
+background-color:#4056A1;
+color: #FFFFFF;
+
+}
+ .header {
+
+font-family: "Bungee", sans-serif;
+margin: 1.5em ;
+justify-content:flex-start;
+
+
+
+}
+
+.ActionCall {
+display: inline-flex;
+justify-content: left;
+}
