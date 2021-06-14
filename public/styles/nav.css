@@ -1,42 +1,38 @@
 nav {
-height: 120px;
-background-color:#4056A1;
-color: #FFFFFF;
-display: flex;
-justify-content: center;
-justify-content: space-between
-
+  height: 120px;
+  background-color: #4056a1;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  position: static;
+  z-index: 1000;
 }
- nav .header {
-
-font-family: "Bungee", sans-serif;
-font-size: 1.5em;
-display: flex;
-flex-direction: column;
-justify-content: center;
-margin-left: 1.5em;
+nav .header {
+  font-family: "Bungee", sans-serif;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.5em;
 }
 
 nav .cta {
   display: flex;
   margin-right: 1.5em;
+  margin-bottom: 1em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-font-style: inherit;
+  font-style: inherit;
 }
 
 nav .actioncall {
-font-family: sans-serif;
-margin-top: 1.5em;
-display: inline;
-
-
+  font-family: sans-serif;
+  margin-top: 1.5em;
+  display: inline;
 }
 nav i {
   color: red;
   font-size: 1.15em;
 }
-
-
-
