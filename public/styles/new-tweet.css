@@ -25,7 +25,7 @@
   outline: 0;
 }
 
-.new-tweet .counter {
+ .counter {
   font-family: "Bungee", sans-serif;
   padding: 2;
   margin: 10px;
@@ -34,4 +34,8 @@
 .submit {
   display: flex;
   justify-content: space-between;
+}
+.limit-exceeded {
+color: red
+
 }
