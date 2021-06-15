@@ -1,14 +1,14 @@
+.new-tweet {
+  width: 100%;
+}
 
-
-
-
- .new-tweet button {
+.new-tweet button {
   background-color: #4056a2;
   font-family: "Bungee", sans-serif;
-  color:#FFFFFF;
-  padding: 1px;
-  margin-top: 7px;
-  
+  color: #ffffff;
+  padding: 2;
+  margin-right: 0;
+  margin-top: 10px;
 }
 
 #tweet-text {
@@ -21,14 +21,17 @@
   width: 100%;
 }
 
-.new-tweet .counter {
-  font-family: "Bungee", sans-serif;
-  padding: 1px;
-  margin-top: 7px;
+#tweet-text:focus-visible {
+  outline: 0;
 }
 
+.new-tweet .counter {
+  font-family: "Bungee", sans-serif;
+  padding: 2;
+  margin: 10px;
+}
 
 .submit {
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
