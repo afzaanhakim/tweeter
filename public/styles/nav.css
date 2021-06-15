@@ -5,26 +5,32 @@ nav {
   display: flex;
   justify-content: center;
   justify-content: space-between;
-  position: static;
+  position: relative;
   z-index: 1;
+  padding: 1em;
 }
 nav .header {
   font-family: "Bungee", sans-serif;
   font-size: 1.5em;
-  display: flex;
-  align-items: center;
-  margin-left: 1.5em;
+  margin: 10px;
 }
 
 nav .cta {
   display: flex;
-  margin-right: 1.5em;
+  margin-right: 10px;
   margin-bottom: 1em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-style: inherit;
 }
+
+.cta:hover {
+
+  color: black;
+  
+
+}
+
 
 nav .actioncall {
   font-family: sans-serif;
