@@ -3,7 +3,6 @@ nav {
   background-color: #4056a1;
   color: #ffffff;
   display: flex;
-  justify-content: center;
   justify-content: space-between;
   position: relative;
   z-index: 1;
