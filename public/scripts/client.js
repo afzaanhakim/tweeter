@@ -31,10 +31,8 @@ return htmlContent;
 
 
 
-
-
-
 const loadTweets = function() {
+  
 const url = 'http://localhost:8080/tweets/'
   $.ajax({
   url,
@@ -53,11 +51,12 @@ const url = 'http://localhost:8080/tweets/'
 
 
 }
+loadTweets()
 
-
+// 
 $(document).ready(function(){
   loadTweets()
-  $('.form').on('submit', function(event){
+  $('.new-tweet .form').on('submit', function(event){
   
     event.preventDefault()
     console.log('clicekd on submit');
@@ -71,6 +70,7 @@ $(document).ready(function(){
       .done(()=> {
         console.log('successful posted')
         $('textarea').val('');
+        $('.counter').text('140')
         
       })
       .fail(()=> {
