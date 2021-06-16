@@ -2,8 +2,6 @@
 
 
 const renderTweets = function(data) {
-  //empty the container
-
   $('#tweet-container').empty()
   for (let tweet of data){
    let renVal = createTweetElement(tweet)
@@ -14,7 +12,7 @@ const renderTweets = function(data) {
 const createTweetElement = function(data) {
 
   
-  // const $tweet = $('<article class ="tweet">')
+
 
 let htmlContent = 
 `<article class = "tweet">
@@ -30,12 +28,6 @@ let htmlContent =
 
 return htmlContent;
 }
-
-//const $tweet = createTweetElement(tweetData)
-
-// console.log($tweet); 
-// $('#tweets-container').append($tweet);
-
 
 
 
