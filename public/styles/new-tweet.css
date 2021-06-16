@@ -11,6 +11,11 @@
   margin-top: 10px;
 }
 
+.submit {
+  display: flex;
+  justify-content: space-between;
+}
+
 #tweet-text {
   display: flex;
   background-color: transparent;
@@ -19,22 +24,15 @@
   border-right: none;
   border-left: none;
   width: 100%;
-}
-
-#tweet-text:focus-visible {
   outline: 0;
 }
 
- .counter {
+.counter {
   font-family: "Bungee", sans-serif;
   padding: 2;
   margin: 10px;
 }
 
-.submit {
-  display: flex;
-  justify-content: space-between;
-}
 .limit-exceeded {
-color: red
+  color: red;
 }
