@@ -1,3 +1,9 @@
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const renderTweets = function (data) {
   $("#tweet-container").empty();
   for (let tweet of data) {
@@ -10,11 +16,11 @@ const createTweetElement = function (data) {
   let htmlContent = `<article class = "tweet">
 <header class = "user-header">
 <header class = "friend-profile"> <img class ="avatar" src="${
-    data.user.avatars
-  }"> ${data.user.name} </header>
-<header class = "friend-handle"> ${data.user.handle}</header>
+    escape(data.user.avatars)
+  }"> ${escape(data.user.name)} </header>
+<header class = "friend-handle"> ${escape(data.user.handle)}</header>
 </header>
-<section class = "tweet-text"> ${data.content.text}</section>
+<section class = "tweet-text"> ${escape(data.content.text)}</section>
 <footer class = "actions"><div class = "time"> ${timeago.format(
     data.created_at
   )} </div><div class = icons><i name = "retweet" class="fas fa-retweet"></i>
