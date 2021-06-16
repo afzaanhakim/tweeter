@@ -26,7 +26,7 @@ const createTweetElement = function (data) {
 };
 
 const loadTweets = function () {
-  const url = "http://localhost:8080/tweets/";
+  const url = "http://localhost:8080/tweets";
   $.ajax({
     url,
     method: "GET",
@@ -39,7 +39,7 @@ const loadTweets = function () {
       console.log("could not load");
     });
 };
-loadTweets();
+
 
 //
 $(document).ready(function () {
