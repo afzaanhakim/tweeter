@@ -1,5 +1,5 @@
 "use strict";
-
+const timeAgo = require('timeago.js')
 // Simulates the kind of delay we see with network or filesystem operations
 const simulateDelay = require("./util/simulate-delay");
 
@@ -19,7 +19,10 @@ module.exports = function makeDataHelpers(db) {
     getTweets: function(callback) {
       simulateDelay(() => {
         const sortNewestFirst = (a, b) => a.created_at - b.created_at;
-        callback(null, db.tweets.sort(sortNewestFirst));
+        callback(null, db.tweets.sort(sortNewestFirst).map(tweet => {
+          tweet.created_at = timeAgo.format(tweet.created_at)
+          return time
+        }) )
       });
     }
 
