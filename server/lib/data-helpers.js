@@ -1,5 +1,5 @@
 "use strict";
-const timeAgo = require("timeago.js");
+
 // Simulates the kind of delay we see with network or filesystem operations
 const simulateDelay = require("./util/simulate-delay");
 
