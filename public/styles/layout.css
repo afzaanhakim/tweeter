@@ -59,12 +59,10 @@ display:flex;
 
 }
 
-
 .tweet-container  .friend-handle {
   padding: 1em
 
 }
-
 .tweet-container .friend-profile {
 padding: 1em
 
@@ -112,17 +110,13 @@ margin-top: 1%
 footer .icons {
   margin: 2px;
   justify-content: space-around;
-
 }
 .fa-heart:hover {
 color: red
-
 }
 .fa-flag:hover{
-
   color: blue
 }
-
 
 .fa-retweet{
   margin: 5
