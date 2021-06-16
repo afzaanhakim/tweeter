@@ -48,22 +48,26 @@ $(document).ready(function () {
     event.preventDefault();
     console.log("clicekd on submit");
 
-    
-
-    $.ajax({
-      method: "POST",
-      url: "http://localhost:8080/tweets",
-      data: $(this).serialize(),
-    })
-      .done(() => {
-        console.log("successful posted");
-        $("textarea").val("");
-        $(".counter").text("140");
+    if ($(".new-tweet textarea").val().length > 140) {
+      alert("Too long");
+    } else if ($(".new-tweet textarea").val() === "") {
+      alert("You have not typed anything in here yet");
+    } else {
+      $.ajax({
+        method: "POST",
+        url: "http://localhost:8080/tweets",
+        data: $(this).serialize(),
       })
-      .fail(() => {
-        console.log("posting failed");
-      })
-      .always(loadTweets());
+        .done(() => {
+          console.log("successful posted");
+          $("textarea").val("");
+          $(".counter").text("140");
+        })
+        .fail(() => {
+          console.log("posting failed");
+        })
+        .always(loadTweets());
+    }
   });
 });
 //console.log(renderTweets(dataBase));
