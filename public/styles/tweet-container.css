@@ -1,12 +1,20 @@
 #tweet-container {
   margin: 3em;
   width: 100%;
-  border: 3px solid black;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column-reverse;
 }
+article {
 
+border-style: solid black;
+border-width: 2px;
+border: 3px solid black;
+width: 90%
+
+}
 .user-header {
   display: flex;
   align-items: center;
