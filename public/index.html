@@ -81,34 +81,19 @@
       </section>
 
       <section id = "tweet-container">
-        <article class = "tweet"> 
+        <!-- <article class = "tweet"> 
           <header class = "user-header">
-<header class = "friend-profile"><img class ="avatar" src="/images/user-avatar.png"> EL EF CEEE </header>
+<header class = "friend-profile"><img class ="avatar" src="/images/user-avatar.png"> afzaan</header>
  
 
-<header class = "friend-handle"> @LFC </header>
+<header class = "friend-handle"> </header>
 </header>
-  <section class = "tweet-text"> How to do this?</section>
+  <section class = "tweet-text">  </section>
   <footer class = "actions"><div class = "time">  </div><div class = icons><i name = "retweet" class="fas fa-retweet"></i>
     <i name = "flag" class="fas fa-flag"></i>
     <i name = "heart" class="fas fa-heart"></i></div></footer>
-</article>
+</article> -->
       </section>
     </main>
   </body>
-  <script> 
-    $(document).ready(function () {
-      let tweets = $(".tweet");
-    
-      tweets.each(function (tweet) {
-        tweet = tweets[tweet]
-        // console.log(tweet)
-        let tweetTime = $(tweet).find(".time");
-        tweetTime.text(timeConvert(tweetTime.text()));
-      });
-    });
-    const timeConvert = function (time) {
-      return timeago.format(time);
-    };
-    </script>
 </html>
