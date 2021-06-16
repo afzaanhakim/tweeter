@@ -54,6 +54,7 @@ article.tweet:hover {
 .tweet {
   margin-top: 10px;
   width: 110%;
+  margin-bottom:10px
 }
 
 .tweet:hover {
