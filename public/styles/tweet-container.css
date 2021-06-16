@@ -7,7 +7,7 @@
   justify-content: space-between;
 }
 
-.tweet-container .user-header {
+.user-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,13 +17,12 @@
   box-shadow: 5px 10px #888888;
 }
 
-.tweet-container .friend-handle {
+.friend-handle {
   padding: 1em;
   opacity: 0.5;
 }
-.tweet-container .friend-profile {
+.friend-profile {
   padding: 1em;
-  
 }
 
 .tweet-container .tweet-text {
@@ -64,11 +63,13 @@ footer {
 footer .icons {
   justify-content: space-around;
 }
+
+.fa-heart {
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+}
 .fa-heart:hover {
   color: red;
-}
-.fa-flag:hover {
-  color: blue;
 }
 
 .fa-retweet {
@@ -76,11 +77,10 @@ footer .icons {
   margin-bottom: 0.5em;
 }
 
-.fa-heart {
-  margin-left: 0.5em;
-  margin-bottom: 0.5em;
-}
-
 .fa-retweet:hover {
   color: green;
+}
+
+.fa-flag:hover {
+  color: blue;
 }
