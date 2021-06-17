@@ -1,6 +1,6 @@
 nav {
   height: 120px;
-  background-color: #4056a1;
+  background-color: rgba(238, 216, 168, 0.849);
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -11,9 +11,9 @@ nav {
 
 .fixed-nav-bar {
   position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-  width: 100%
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
 nav .header {
@@ -32,9 +32,7 @@ nav .cta {
 }
 
 .cta:hover {
-
   color: black;
-  
 }
 
 nav .actioncall {
