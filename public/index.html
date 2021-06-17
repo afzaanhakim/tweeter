@@ -62,13 +62,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <div class = "error"></div>
+        <h2>What's on your mind?</h2>
         <form class="form" action="/tweets/" method="POST">
           <div class="input">
             <textarea
               name="text"
               id="tweet-text"
-              placeholder="What are you humming about?"
+              placeholder="Say something...."
             ></textarea>
             <div class="submit">
               <button type="submit" value="submit">Tweet</button>
