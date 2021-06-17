@@ -1,9 +1,11 @@
+
+//function to secure from cross-site scripting vulnerabilities
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-
+//rendering tweets generated
 const renderTweets = function (data) {
   
   $("#tweet-container").empty();
@@ -12,7 +14,7 @@ const renderTweets = function (data) {
     $("#tweet-container").append(renVal);
   }
 };
-
+// creating HTML for dynamic tweets from the server
 const createTweetElement = function (data) {
   let htmlContent = `<article class = "tweet">
 <header class = "user-header">
@@ -32,54 +34,56 @@ const createTweetElement = function (data) {
   return htmlContent;
 };
 
-
+const hideErrorBox = function(){
+  $(".new-tweet .error").hide();
+}
+const tweetForm = $(".new-tweet .form")
 // fetching tweets and rendering to the timeline
 const loadTweets = function () {
-  $(".new-tweet .error").hide();
+  hideErrorBox()
   const url = "http://localhost:8080/tweets";
   $.ajax({
     url,
     method: "GET",
   })
     .done((tweet) => {
-      console.log("getting successful displayed");
+      
       renderTweets(tweet);
     })
-    .fail(() => {
-      console.log("could not load");
+    .fail(() => { console.log(error)
     });
 };
 
 // posting tweets and calling load tweets to render tweets to the timeline // conditions for submitting tweets
 
 $(document).ready(function () {
+  
   loadTweets();
   $(".new-tweet .form").on("submit", function (event) {
     event.preventDefault();
 
-    if ($(".new-tweet textarea").val().length > 140) {
+    if ($(".new-tweet textarea").val().trim().length > 140) {
       $(".new-tweet .error").text("!!!!  Hey, please shorten your tweet to keep it below 140 characters !!!!");
       $(".new-tweet .error").slideDown();
-    } else if ($(".new-tweet textarea").val() === "") {
+    } else if ($(".new-tweet textarea").val().trim() === "") {
       $(".new-tweet .error").text("!!!!  Hey, say something?  !!!!");
       $(".new-tweet .error").slideDown();
     } else {
-      $(".new-tweet .error").hide();
+      hideErrorBox()
       $.ajax({
         method: "POST",
         url: "http://localhost:8080/tweets",
         data: $(this).serialize(),
       })
         .done(() => {
-          console.log("successful posted");
           $("textarea").val("");
           $(".counter").text("140");
         })
         .fail(() => {
           console.log("posting failed");
         })
-        .always(loadTweets());
+        .always(()=> {loadTweets()});
     }
   });
 });
-//console.log(renderTweets(dataBase));
+
