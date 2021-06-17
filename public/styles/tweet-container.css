@@ -47,7 +47,7 @@ article .tweet-text {
   border-right: none;
   border-left: none;
   margin: 1em;
-  word-break: break-all
+  word-break: break-all;
 }
 
 footer {
