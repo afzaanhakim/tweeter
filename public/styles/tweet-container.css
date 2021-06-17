@@ -1,21 +1,21 @@
 #tweet-container {
   margin: 2em;
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column-reverse;
 }
 article.tweet {
-  border-style: solid black;
   border-width: 2px;
   border: 3px solid black;
+  margin-top: 10px;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 article.tweet:hover {
-  box-shadow: 5px 3px #888888;
+  box-shadow: 8px 8px #888888;
 }
 .user-header {
   display: flex;
@@ -28,11 +28,12 @@ article.tweet:hover {
 .friend-handle {
   padding: 1em;
   opacity: 0.5;
+  display: flex;
+  align-items: center;
 }
 .friend-profile {
   padding: 1em;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -45,22 +46,8 @@ article .tweet-text {
   border-top: none;
   border-right: none;
   border-left: none;
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 0.5em;
+  margin: 1em;
   word-break: break-all
-}
-
-.tweet {
-  margin-top: 10px;
-  width: 110%;
-  margin-bottom: 10px;
-  
-}
-
-.tweet:hover {
-  box-shadow: 1 1 11px rgba(33, 33, 33, 0.2);
 }
 
 footer {
@@ -71,11 +58,6 @@ footer {
   justify-content: space-between;
   font-size: 20px;
   margin-bottom: 6px;
-  margin-top: 1%;
-}
-
-footer .icons {
-  justify-content: space-around;
 }
 
 .fa-heart {
