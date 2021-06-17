@@ -5,6 +5,7 @@ const escape = function (str) {
 };
 
 const renderTweets = function (data) {
+  
   $("#tweet-container").empty();
   for (let tweet of data) {
     let renVal = createTweetElement(tweet);
@@ -15,9 +16,9 @@ const renderTweets = function (data) {
 const createTweetElement = function (data) {
   let htmlContent = `<article class = "tweet">
 <header class = "user-header">
-<header class = "friend-profile"> <img class ="avatar" src="${
-    escape(data.user.avatars)
-  }"> ${escape(data.user.name)} </header>
+<header class = "friend-profile"> <img class ="avatar" src="${escape(
+    data.user.avatars
+  )}"> ${escape(data.user.name)} </header>
 <header class = "friend-handle"> ${escape(data.user.handle)}</header>
 </header>
 <section class = "tweet-text"> ${escape(data.content.text)}</section>
@@ -31,7 +32,10 @@ const createTweetElement = function (data) {
   return htmlContent;
 };
 
+
+// fetching tweets and rendering to the timeline
 const loadTweets = function () {
+  $(".new-tweet .error").hide();
   const url = "http://localhost:8080/tweets";
   $.ajax({
     url,
@@ -46,19 +50,21 @@ const loadTweets = function () {
     });
 };
 
+// posting tweets and calling load tweets to render tweets to the timeline // conditions for submitting tweets
 
-//
 $(document).ready(function () {
   loadTweets();
   $(".new-tweet .form").on("submit", function (event) {
     event.preventDefault();
-    console.log("clicekd on submit");
 
     if ($(".new-tweet textarea").val().length > 140) {
-      alert("Too long");
+      $(".new-tweet .error").text("Hey, please shorten your tweet to keep it below 140 characters");
+      $(".new-tweet .error").slideDown();
     } else if ($(".new-tweet textarea").val() === "") {
-      alert("You have not typed anything in here yet");
+      $(".new-tweet .error").text("Hey, say something?");
+      $(".new-tweet .error").slideDown();
     } else {
+      $(".new-tweet .error").hide();
       $.ajax({
         method: "POST",
         url: "http://localhost:8080/tweets",
