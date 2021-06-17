@@ -58,10 +58,10 @@ $(document).ready(function () {
     event.preventDefault();
 
     if ($(".new-tweet textarea").val().length > 140) {
-      $(".new-tweet .error").text("Hey, please shorten your tweet to keep it below 140 characters");
+      $(".new-tweet .error").text("!!!!  Hey, please shorten your tweet to keep it below 140 characters !!!!");
       $(".new-tweet .error").slideDown();
     } else if ($(".new-tweet textarea").val() === "") {
-      $(".new-tweet .error").text("Hey, say something?");
+      $(".new-tweet .error").text("!!!!  Hey, say something?  !!!!");
       $(".new-tweet .error").slideDown();
     } else {
       $(".new-tweet .error").hide();
