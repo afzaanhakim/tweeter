@@ -6,7 +6,7 @@ nav {
   justify-content: space-between;
   position: relative;
   z-index: 1;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 .fixed-nav-bar {
@@ -18,8 +18,8 @@ nav {
 
 nav .header {
   font-family: "Bungee", sans-serif;
-  font-size: 1.5em;
-  margin: 10px;
+  font-size: 40px;
+  margin-bottom: 1em;
 }
 
 nav .cta {
@@ -35,9 +35,7 @@ nav .cta {
 
   color: black;
   
-
 }
-
 
 nav .actioncall {
   font-family: sans-serif;
