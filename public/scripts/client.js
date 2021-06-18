@@ -13,7 +13,7 @@ const renderTweets = function (data) {
   }
 };
 
-//function for hiding the error box 
+//function for hiding the error box
 const hideErrorBox = function () {
   $(".new-tweet .error").hide();
 };
@@ -38,7 +38,6 @@ const createTweetElement = function (data) {
   return htmlContent;
 };
 
-
 // function for fetching tweets from "/tweets" and calling renderTweets with tweet
 const loadTweets = function () {
   hideErrorBox(); // calling hideErrorbox inside loadTweets so that errorBox is hidden as soon as tweets loaded
@@ -54,7 +53,6 @@ const loadTweets = function () {
       console.log("error");
     });
 };
-
 
 $(document).ready(function () {
   loadTweets();

@@ -7,14 +7,14 @@
   position: fixed;
   bottom: 50px;
   right: 0;
-  background-color: rgba(57, 26, 192, 0.2);;
+  background-color: rgba(57, 26, 192, 0.2);
   color: whitesmoke;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 5px
+  margin: 5px;
 }
 #scrollup:hover {
-  background-color: #DDF;
+  background-color: #ddf;
   color: #000;
 }

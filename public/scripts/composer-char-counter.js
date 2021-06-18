@@ -1,5 +1,4 @@
-
-//character counter updates the counter everytime text is inputted 
+//character counter updates the counter everytime text is inputted
 $(document).ready(function () {
   const textArea = $(".new-tweet textarea");
 
@@ -10,7 +9,7 @@ $(document).ready(function () {
 
     $(this).find(".counter").text(charLeft);
 
-//if over character limit then the counter turns red
+    //if over character limit then the counter turns red
 
     if (charLeft <= 0) {
       $(".counter").addClass("limit-exceeded");
