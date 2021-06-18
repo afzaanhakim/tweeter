@@ -7,8 +7,14 @@ Tweeter lets you share updates with your friends within 140 characters! Tweet an
 
 ## How it looks (Screenshots)
 !["Desktop View of Tweeter"](https://github.com/afzaanhakim/tweeter/blob/master/docs/desktopview.png?raw=true)
+
+
 !["Tablet View of Tweeter"](https://github.com/afzaanhakim/tweeter/blob/master/docs/tabletview.png?raw=true)
+
+
 !["Error Message if tweet over 140 characters"](https://github.com/afzaanhakim/tweeter/blob/master/docs/error2.png?raw=true)
+
+
 !["Scroll Up Button "](https://github.com/afzaanhakim/tweeter/blob/master/docs/ScrollUpButton.png?raw=true)
 
 
